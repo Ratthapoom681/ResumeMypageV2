@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume Cards Portfolio</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Animated Star Background -->
+    <div class="space-bg">
+        <div class="stars"></div>
+        <div class="shooting-stars"></div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+
+        <div class="logo">
+            <i class="fa-solid fa-user"></i>
+            <span>MyResume</span>
+        </div>
+
+        <ul>
+            <li><a href="#home" class="nav-link active"><i class="fa-solid fa-house"></i><span>Home</span></a></li>
+            <li><a href="#about" class="nav-link"><i class="fa-solid fa-id-card"></i><span>About</span></a></li>
+            <li><a href="#experience" class="nav-link"><i class="fa-solid fa-building"></i><span>Experience</span></a>
+            </li>
+            <li><a href="#skills" class="nav-link"><i class="fa-solid fa-code"></i><span>Skills</span></a></li>
+            <li><a href="#projects" class="nav-link"><i class="fa-solid fa-briefcase"></i><span>Projects</span></a></li>
+            <li><a href="#contact" class="nav-link"><i class="fa-solid fa-envelope"></i><span>Contact</span></a></li>
+        </ul>
+    </div>
+
+    <!-- Main Pages -->
+    <div class="main-content">
+
+        <!-- HOME -->
+        <section class="page active" id="home">
+            <div class="floating-card home-card">
+
+                <div class="home-photo">
+                    <img src="img/d52195dd-7aca-46c4-83d4-8ee03adb2759.jpg" alt="Profile">
+                </div>
+
+                <h1 class="home-name">Ratthapoom Wangdech</h1>
+                <span class="home-role">IT Support</span>
+
+            </div>
+        </section>
+
+
+        <!-- ABOUT -->
+        <section class="page" id="about">
+            <div class="floating-card">
+
+                <div class="card-header">
+                    <div class="profile-frame">
+                        <img src="img/d52195dd-7aca-46c4-83d4-8ee03adb2759.jpg" alt="About">
+                    </div>
+
+                    <div>
+                        <h1>About Me</h1>
+                        <span class="tag">Profile</span>
+                    </div>
+                </div>
+
+                <p>Passionate about building beautiful and usable web experiences.</p>
+
+            </div>
+        </section>
+
+        <section class="page" id="experience">
+            <div class="floating-card">
+
+                <div class="card-header">
+                    <div class="profile-frame">
+                        <img src="img/d52195dd-7aca-46c4-83d4-8ee03adb2759.jpg" alt="Experience">
+                    </div>
+
+                    <div>
+                        <h1>Work Experience</h1>
+                        <span class="tag">My Background</span>
+                    </div>
+                </div>
+
+                <p><strong>7-Eleven Store Staff</strong></p>
+                <p>CP ALL Public Company Limited</p>
+                <p>2023 – 2024</p>
+
+                <br>
+
+                <ul class="skills-list">
+                    <li>Customer service and cashier handling</li>
+                    <li>Stock management and product arrangement</li>
+                    <li>Teamwork and responsibility in daily operations</li>
+                </ul>
+
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section class="page" id="skills">
+            <div class="floating-card">
+
+                <div class="card-header">
+                    <div class="profile-frame">
+                        <img src="img/d52195dd-7aca-46c4-83d4-8ee03adb2759.jpg" alt="Skills">
+                    </div>
+
+                    <div>
+                        <h1>Skills</h1>
+                        <span class="tag">Tech Stack</span>
+                    </div>
+                </div>
+
+                <p>HTML • CSS • JavaScript • React</p>
+
+            </div>
+        </section>
+
+
+        <!-- PROJECTS -->
+        <section class="page" id="projects">
+            <div class="floating-card">
+
+                <div class="card-header">
+                    <div class="profile-frame">
+                        <img src="img/d52195dd-7aca-46c4-83d4-8ee03adb2759.jpg" alt="Projects">
+                    </div>
+
+                    <div>
+                        <h1>Projects</h1>
+                        <span class="tag">Work</span>
+                    </div>
+                </div>
+
+                <p>Portfolio Website • Dashboard UI • Landing Page</p>
+
+            </div>
+        </section>
+
+        <section class="page" id="contact">
+            <div class="floating-card contact-card">
+
+                <!-- รูปใหญ่ตรงกลาง -->
+                <div class="contact-photo">
+                    <img src="img/d52195dd-7aca-46c4-83d4-8ee03adb2759.jpg" alt="Contact">
+                </div>
+
+                <!-- Contact อยู่ใต้รูป -->
+                <h1 class="contact-title">Contact</h1>
+
+                <!-- ข้อความอื่นอยู่ซ้าย -->
+                <div class="contact-info">
+                    <p>Email: johndoe@email.com</p>
+                    <p>Phone: +66 123 456 789</p>
+                    <p>Location: Bangkok, Thailand</p>
+                </div>
+
+            </div>
+        </section>
+
+        <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,381 @@
+:root {
+    --primary-color: #4f46e5;
+    --bg-color: #f9fafb;
+    --text-color: #f9fafb;
+
+    --card-bg: #0b1220;
+    --card-border: rgba(255, 255, 255, 0.45);
+    --shadow: 0px 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    background: var(--bg-color);
+    color: var(--text-color);
+    transition: 0.25s;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    width: 80px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(14px);
+    color: white;
+    overflow: hidden;
+    transition: 0.25s;
+    z-index: 50;
+}
+
+.sidebar:hover {
+    width: 240px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.logo span {
+    opacity: 0;
+    transition: 0.25s;
+}
+
+.sidebar:hover .logo span {
+    opacity: 1;
+}
+
+.sidebar ul {
+    list-style: none;
+    margin-top: 30px;
+}
+
+.sidebar ul li a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+}
+
+.sidebar ul li a.active {
+    background: var(--primary-color);
+}
+
+/* Hide text when collapsed */
+.sidebar ul li a span {
+    opacity: 0;
+    transition: 0.25s;
+}
+
+.sidebar:hover ul li a span {
+    opacity: 1;
+}
+
+.sidebar:hover .theme-toggle span {
+    opacity: 1;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 80px;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Pages */
+.page {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.35s ease;
+}
+
+.page.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Floating Card FULLSCREEN */
+.floating-card {
+    width: 70%;
+    height: 85vh;
+    padding: 60px;
+
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    backdrop-filter: blur(20px);
+    box-shadow: 0px 25px 80px rgba(0, 0, 0, 0.55);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    cursor: default;
+}
+
+.floating-card h1 {
+    font-size: 46px;
+}
+
+.floating-card p {
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+.tag {
+    margin-top: 10px;
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: rgba(79, 70, 229, 0.15);
+}
+
+/* Space Background */
+.space-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -10;
+    overflow: hidden;
+    background: radial-gradient(circle at bottom, #050b1e, #000);
+}
+
+.stars {
+    width: 100%;
+    height: 100%;
+    background-image:
+        radial-gradient(2px 2px at 20% 30%, white, transparent),
+        radial-gradient(1px 1px at 40% 70%, white, transparent),
+        radial-gradient(2px 2px at 70% 20%, white, transparent);
+    background-repeat: repeat;
+    background-size: 300px 300px;
+    animation: starMove 60s linear infinite;
+    opacity: 0.7;
+}
+
+@keyframes starMove {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-500px);
+    }
+}
+
+/* 🌠 Shooting Stars */
+.shooting-stars::before,
+.shooting-stars::after {
+    content: "";
+    position: absolute;
+    top: -20%;
+    left: 50%;
+
+    width: 2px;
+    height: 160px;
+
+    background: linear-gradient(white, transparent);
+    opacity: 0.8;
+
+    transform: rotate(25deg);
+    animation: shoot 3s linear infinite;
+}
+
+/* ดาวตกดวงที่สอง */
+.shooting-stars::after {
+    left: 70%;
+    height: 200px;
+    animation-delay: 1.5s;
+}
+
+/* Animation ดาวตก */
+@keyframes shoot {
+    0% {
+        transform: translateY(0) translateX(0) rotate(25deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(900px) translateX(-400px) rotate(25deg);
+        opacity: 0;
+    }
+}
+
+/* Header Layout */
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+/* Profile Frame */
+.profile-frame {
+    width: 120px;
+    height: 120px;
+
+    border-radius: 20px;
+    overflow: hidden;
+
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.4);
+
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* Image inside frame */
+.profile-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Download Resume Button */
+.download-btn {
+    margin-top: 25px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 14px 20px;
+    border-radius: 16px;
+
+    background: rgba(79, 70, 229, 0.9);
+    color: white;
+
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+
+    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.35);
+    transition: 0.25s ease;
+}
+
+.download-btn:hover {
+    transform: translateY(-3px);
+    background: rgba(79, 70, 229, 1);
+}
+
+/* ===== HOME CARD ONLY ===== */
+.home-card {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 18px;
+}
+
+/* รูปโปรไฟล์ใหญ่ */
+.home-photo {
+    width: 220px;
+    height: 220px;
+    border-radius: 28px;
+    overflow: hidden;
+
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.55);
+
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.home-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ชื่อ */
+.home-name {
+    font-size: 52px;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* ตำแหน่ง */
+.home-role {
+    font-size: 18px;
+    padding: 8px 18px;
+    border-radius: 999px;
+
+    background: rgba(79, 70, 229, 0.18);
+    border: 1px solid rgba(79, 70, 229, 0.35);
+
+    opacity: 0.95;
+}
+
+/* ===== CONTACT PAGE STYLE ===== */
+
+.contact-card {
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+}
+
+/* รูปใหญ่ */
+.contact-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 28px;
+    overflow: hidden;
+
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.55);
+
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.contact-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Title */
+.contact-title {
+    font-size: 52px;
+    margin-top: 10px;
+}
+
+/* Info อยู่ซ้าย */
+.contact-info {
+    width: 100%;
+    text-align: left;
+    margin-top: 30px;
+}
+
+.contact-info p {
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.skills-list {
+  margin-top: 15px;
+  text-align: left;
+  line-height: 2;
+  font-size: 18px;
+}
