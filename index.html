@@ -2,176 +2,312 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Resume Cards Portfolio</title>
-
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CYBER_RESUME.exe</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-
-    <!-- Animated Star Background -->
-    <div class="space-bg">
-        <div class="stars"></div>
-        <div class="shooting-stars"></div>
-    </div>
-
-    <!-- Sidebar -->
-    <div class="sidebar">
-
-        <div class="logo">
-            <i class="fa-solid fa-user"></i>
-            <span>MyResume</span>
+    <div id="boot-sequence" class="boot-sequence">
+        <div class="boot-text">
+            <div class="boot-line">> INITIALIZING CYBER_RESUME.exe...</div>
+            <div class="boot-line">> LOADING PERSONA_DATA...</div>
+            <div class="boot-line">> ESTABLISHING NEURAL_LINK...</div>
+            <div class="boot-line">> SYSTEM_READY</div>
         </div>
-
-        <ul>
-            <li><a href="#home" class="nav-link active"><i class="fa-solid fa-house"></i><span>Home</span></a></li>
-            <li><a href="#about" class="nav-link"><i class="fa-solid fa-id-card"></i><span>About</span></a></li>
-            <li><a href="#experience" class="nav-link"><i class="fa-solid fa-building"></i><span>Experience</span></a>
-            </li>
-            <li><a href="#skills" class="nav-link"><i class="fa-solid fa-code"></i><span>Skills</span></a></li>
-            <li><a href="#projects" class="nav-link"><i class="fa-solid fa-briefcase"></i><span>Projects</span></a></li>
-            <li><a href="#contact" class="nav-link"><i class="fa-solid fa-envelope"></i><span>Contact</span></a></li>
-        </ul>
     </div>
 
-    <!-- Main Pages -->
-    <div class="main-content">
+    <div id="main-interface" class="main-interface">
 
-        <!-- HOME -->
-        <section class="page active" id="home">
-            <div class="floating-card home-card">
+        <div class="background-container">
+            <div class="cyber-stars"></div>
+            <div class="cyber-horizon"></div>
+            <div class="cyber-grid-plane"></div>
+        </div>
+        <div class="scanlines"></div>
+        <div class="noise"></div>
 
-                <div class="home-photo">
-                    <img src="img/d52195dd-7aca-46c4-83d4-8ee03adb2759.jpg" alt="Profile">
+        <nav class="nav-terminal">
+            <div class="nav-header">
+                <span class="prompt">></span>
+                <span class="nav-title">CYBER_RESUME_v1.0</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#identity" class="nav-link">IDENTITY</a></li>
+                <li><a href="#skills" class="nav-link">SKILLS.EXE</a></li>
+                <li><a href="#experience" class="nav-link">EXPERIENCE.LOG</a></li>
+                <li><a href="#projects" class="nav-link">PROJECTS.DAT</a></li>
+                <li><a href="#certifications" class="nav-link">CERTS.KEY</a></li>
+                <li><a href="#contact" class="nav-link">CONTACT.CONNECT</a></li>
+            </ul>
+        </nav>
+
+        <section id="identity" class="section identity-module">
+            <div class="module-header">
+                <span class="module-tag">// IDENTITY</span>
+                <div class="status-indicator online"></div>
+            </div>
+            <div class="module-content">
+                <div class="identity-display">
+                    <div class="holo-frame">
+
+                        <div class="holo-border-frame">
+                            <div class="holo-corner-ne holo-corner-tl"></div>
+                            <div class="holo-corner-ne holo-corner-tr"></div>
+                            <div class="holo-corner-ne holo-corner-bl"></div>
+                            <div class="holo-corner-ne holo-corner-br"></div>
+                        </div>
+
+                        <div class="holo-grid-bg"></div>
+                        <div class="holo-scanner-lines"></div>
+
+                        <div class="cyber-portrait-container">
+                            <div class="cyber-portrait-frame">
+                                <img src="file/img/d52195dd-7aca-46c4-83d4-8ee03adb2759.jpg" alt="Profile"
+                                    class="cyber-img">
+
+                                <span class="corner top-left"></span>
+                                <span class="corner top-right"></span>
+                                <span class="corner bottom-left"></span>
+                                <span class="corner bottom-right"></span>
+                                <div class="scan-line"></div>
+                            </div>
+                        </div>
+
+                        <div class="holo-profile-info">
+                            <h1 class="name-glitch hol-text-glow" data-text="RATHHAPOOM_WANGDECH">RATHHAPOOM_WANGDECH
+                            </h1>
+
+                            <div class="holo-title-container">
+                                <span class="typing-text" data-text="AGENTIC_BUILDER"></span>
+                            </div>
+
+                            <div class="holo-bio-container">
+                                <div class="holo-bio-lines">
+                                    <div class="holo-terminal-line">SYSTEM_IDENTITY: RATHHAPOOM_WANGDECH</div>
+                                    <div class="holo-terminal-line">STATUS: <span style="color:#0f0">ONLINE</span></div>
+                                    <div class="holo-terminal-line">LOC: [REDACTED]</div>
+                                    <div class="holo-terminal-line">CLEARANCE: LEVEL_5</div>
+                                    <div class="holo-actions">
+                                        <a href="file/resume/Resume Mark 1.pdf" class="cyber-btn download-btn"
+                                            id="download-link" download>
+                                            <span class="btn-text">INITIALIZE_DOWNLOAD</span>
+                                            <span class="btn-loader"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
-
-                <h1 class="home-name">Ratthapoom Wangdech</h1>
-                <span class="home-role">IT Support</span>
-
             </div>
         </section>
 
-
-        <!-- ABOUT -->
-        <section class="page" id="about">
-            <div class="floating-card">
-
-                <div class="card-header">
-                    <div class="profile-frame">
-                        <img src="img/d52195dd-7aca-46c4-83d4-8ee03adb2759.jpg" alt="About">
+        <section id="skills" class="section skills-module">
+            <div class="module-header">
+                <span class="module-tag">// SKILLS.EXE</span>
+                <div class="status-indicator processing"></div>
+            </div>
+            <div class="module-content">
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            C#
+                            <span class="skill-percent">0%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-level="30"></div>
+                        </div>
                     </div>
-
-                    <div>
-                        <h1>About Me</h1>
-                        <span class="tag">Profile</span>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            JAVA
+                            <span class="skill-percent">0%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-level="30"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            DATABASES
+                            <span class="skill-percent">0%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-level="15"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            CSS
+                            <span class="skill-percent">0%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-level="10"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            JAVASCRIPT
+                            <span class="skill-percent">0%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-level="10"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            OTHER
+                            <span class="skill-percent">0%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-level="5"></div>
+                        </div>
                     </div>
                 </div>
-
-                <p>Passionate about building beautiful and usable web experiences.</p>
-
             </div>
         </section>
 
-        <section class="page" id="experience">
-            <div class="floating-card">
-
-                <div class="card-header">
-                    <div class="profile-frame">
-                        <img src="img/d52195dd-7aca-46c4-83d4-8ee03adb2759.jpg" alt="Experience">
-                    </div>
-
-                    <div>
-                        <h1>Work Experience</h1>
-                        <span class="tag">My Background</span>
+        <section id="experience" class="section experience-module">
+            <div class="module-header">
+                <span class="module-tag">// EXPERIENCE.LOG</span>
+                <div class="status-indicator streaming"></div>
+            </div>
+            <div class="module-content">
+                <div class="timeline-container">
+                    <div class="timeline-item">
+                        <div class="timeline-date">MARCH 2025 - May 2025</div>
+                        <div class="timeline-content">
+                            <h3>Internship at 7-Eleven</h3>
+                            <p class="company">CP ALL PUBLIC COMPANY LIMITED.</p>
+                            <p class="description">> Provided front counter and cashier services, including processing
+                                payments, verifying purchased items, and packaging products.</p>
+                            <p class="description">> Stock shelves with merchandise and ensure displays are neat and
+                                organized.</p>
+                            <p class="description">> Maintain a clean and orderly work area.</p>
+                        </div>
                     </div>
                 </div>
-
-                <p><strong>7-Eleven Store Staff</strong></p>
-                <p>CP ALL Public Company Limited</p>
-                <p>2023 – 2024</p>
-
-                <br>
-
-                <ul class="skills-list">
-                    <li>Customer service and cashier handling</li>
-                    <li>Stock management and product arrangement</li>
-                    <li>Teamwork and responsibility in daily operations</li>
-                </ul>
-
             </div>
         </section>
 
-        <!-- SKILLS -->
-        <section class="page" id="skills">
-            <div class="floating-card">
-
-                <div class="card-header">
-                    <div class="profile-frame">
-                        <img src="img/d52195dd-7aca-46c4-83d4-8ee03adb2759.jpg" alt="Skills">
+        <section id="projects" class="section projects-module">
+            <div class="module-header">
+                <span class="module-tag">// PROJECTS.DAT</span>
+                <div class="status-indicator active"></div>
+            </div>
+            <div class="module-content">
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="card-header">
+                            <span class="project-title">CULTIVATION_IDLE_GAME</span>
+                            <span class="project-status">LIVE</span>
+                        </div>
+                        <div class="card-body">
+                            <p class="project-tech">C#</p>
+                            <p class="project-desc">> REAL_TIME_STATE_MANAGEMENT_AND_PROGRESSION</p>
+                            <p class="project-desc">> DYNAMIC_RESOURCE_ECONOMY_AND_SYSTEMS_ARCHITECTURE</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://github.com/Ratthapoom681/CultivationIdleGameUI" target="_blank"
+                                class="cyber-btn">
+                                VIEW_PROJECT
+                            </a>
+                        </div>
                     </div>
-
-                    <div>
-                        <h1>Skills</h1>
-                        <span class="tag">Tech Stack</span>
+                    <div class="project-card">
+                        <div class="card-header">
+                            <span class="project-title">CALENDAR_TODO_LIST</span>
+                            <span class="project-status">ALPHA</span>
+                        </div>
+                        <div class="card-body">
+                            <p class="project-tech">HTML | CSS | JAVASCRIPT | Node.JS</p>
+                            <p class="project-desc">> CALENDAR_AND_TASK_SCHEDULING</p>
+                            <p class="project-desc">> RESTFUL_BACKEND_WITH_JSON_PERSISTENCE</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://github.com/Ratthapoom681/Calendar-Todo-List" target="_blank"
+                                class="cyber-btn">
+                                VIEW_PROJECT
+                            </a>
+                        </div>
                     </div>
                 </div>
+        </section>
 
-                <p>HTML • CSS • JavaScript • React</p>
+        <section id="certifications" class="section certs-module">
+            <div class="module-header">
+                <span class="module-tag">// CERTS.KEY</span>
+                <div class="status-indicator online"></div>
+            </div>
+            <div class="module-content">
+                <div class="certs-grid">
 
+                    <div class="cert-card">
+                        <div class="cert-icon">🔒</div>
+                        <div class="cert-content">
+                            <h3 class="cert-title">AWS_CERTIFIED</h3>
+                            <div class="cert-issuer">AMAZON_WEB_SERVICES</div>
+                            <div class="cert-date">ISSUED: 2023</div>
+                            <div class="cert-id">ID: AWS-884-293</div>
+                        </div>
+                        <div class="cert-overlay">
+                            <a href="#" class="cert-verify-btn"
+                                data-img="file/certificate/959db5d2-45d6-424c-b84e-60a1b1d94852.jpg">VERIFY_TOKEN</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-
-        <!-- PROJECTS -->
-        <section class="page" id="projects">
-            <div class="floating-card">
-
-                <div class="card-header">
-                    <div class="profile-frame">
-                        <img src="img/d52195dd-7aca-46c4-83d4-8ee03adb2759.jpg" alt="Projects">
+        <section id="contact" class="section contact-module">
+            <div class="module-header">
+                <span class="module-tag">// CONTACT.CONNECT</span>
+                <div class="status-indicator connected"></div>
+            </div>
+            <div class="module-content">
+                <div class="network-nodes">
+                    <div class="node-item">
+                        <div class="node-icon">📧</div>
+                        <div class="node-info">
+                            <span class="node-label">EMAIL_PROTOCOL</span>
+                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ratthapoom681@gmail.com&su=Hello&body=Message"
+                                target="_blank" class="node-link">RATTHAPOOM681@GMAIL.COM</a>
+                        </div>
                     </div>
-
-                    <div>
-                        <h1>Projects</h1>
-                        <span class="tag">Work</span>
+                    <div class="node-item">
+                        <div class="node-icon">🐙</div>
+                        <div class="node-info">
+                            <span class="node-label">GITHUB_REPOSITORY</span>
+                            <br> <a href="https://github.com/Ratthapoom681" class="node-link">Ratthapoom681</a>
+                        </div>
                     </div>
                 </div>
-
-                <p>Portfolio Website • Dashboard UI • Landing Page</p>
-
             </div>
         </section>
+    </div>
 
-        <section class="page" id="contact">
-            <div class="floating-card contact-card">
-
-                <!-- รูปใหญ่ตรงกลาง -->
-                <div class="contact-photo">
-                    <img src="img/d52195dd-7aca-46c4-83d4-8ee03adb2759.jpg" alt="Contact">
-                </div>
-
-                <!-- Contact อยู่ใต้รูป -->
-                <h1 class="contact-title">Contact</h1>
-
-                <!-- ข้อความอื่นอยู่ซ้าย -->
-                <div class="contact-info">
-                    <p>Email: johndoe@email.com</p>
-                    <p>Phone: +66 123 456 789</p>
-                    <p>Location: Bangkok, Thailand</p>
-                </div>
-
+    <div id="cert-modal" class="cert-modal-overlay">
+        <div class="cert-modal-card">
+            <div class="modal-header">
+                <span class="modal-title">>> SECURITY_TOKEN_VERIFIED</span>
+                <button class="modal-close">X</button>
             </div>
-        </section>
+            <div class="modal-body">
+                <img src="" alt="Certificate" id="cert-modal-img" class="cert-display-img">
+                <div class="scan-overlay"></div>
+            </div>
+            <div class="modal-footer">
+                <div class="auth-status">AUTHENTICATION: <span class="valid">VALID</span></div>
+            </div>
+        </div>
+    </div>
 
-        <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
