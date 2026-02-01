@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initTypingEffects();
     initGlitchEffects();
     initCursorEffect();
-    initParallaxEffects();
     initProjectInteractions();
     initContactForm();
     initScrollRevealAnimations();
@@ -51,27 +50,6 @@ function initSmoothScrolling() {
             }
         });
     });
-}
-
-// OPTIMIZED PARALLAX (LAG FIX)
-function initParallaxEffects() {
-    const stars = document.querySelector('.cyber-stars');
-    // Only update when browser is ready to paint
-    let ticking = false;
-    let lastScrollY = 0;
-
-    window.addEventListener('scroll', () => {
-        lastScrollY = window.scrollY;
-        if (!ticking) {
-            window.requestAnimationFrame(() => {
-                if (stars) {
-                    stars.style.transform = `translateY(${lastScrollY * 0.5}px)`;
-                }
-                ticking = false;
-            });
-            ticking = true;
-        }
-    }, { passive: true });
 }
 
 // OPTIMIZED SKILLS (0% -> 90%)
@@ -182,21 +160,19 @@ function initDustEffect() {
 
 // TYPING
 function initTypingEffects() {
-    document.querySelectorAll('.typing-text').forEach(el => {
-        const text = el.getAttribute('data-text');
-        if (!text) return;
+    const el = document.querySelector('.typing-text');
+    if (!el) return;
+    const text = el.getAttribute('data-text');
+    
+    // DELAY START BY 1.5 SECONDS
+    setTimeout(() => {
         let i = 0;
-        function type() {
-            if (i < text.length) {
-                el.textContent = text.substring(0, i+1);
-                i++;
-                setTimeout(type, 100);
-            } else {
-                setTimeout(() => { el.textContent = ''; i=0; type(); }, 3000);
-            }
-        }
-        setTimeout(type, 3500);
-    });
+        const typeInterval = setInterval(() => {
+            el.textContent = text.substring(0, i + 1);
+            i++;
+            if (i >= text.length) clearInterval(typeInterval);
+        }, 30);
+    }, 1500); // <--- Increased delay
 }
 
 // GLITCH
