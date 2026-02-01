@@ -370,6 +370,15 @@ body {
 .typing-text {
     color: var(--primary-cyan);
     border-right: 2px solid var(--primary-cyan);
+    white-space: nowrap;
+    overflow: hidden;
+    
+    animation: blinkCursor 0.75s step-end infinite;
+}
+
+@keyframes blinkCursor {
+    from, to { border-color: transparent; }
+    50% { border-color: var(--primary-cyan); }
 }
 
 .holo-terminal-line {

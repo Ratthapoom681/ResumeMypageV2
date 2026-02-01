@@ -162,17 +162,23 @@ function initDustEffect() {
 function initTypingEffects() {
     const el = document.querySelector('.typing-text');
     if (!el) return;
-    const text = el.getAttribute('data-text');
     
-    // DELAY START BY 1.5 SECONDS
-    setTimeout(() => {
-        let i = 0;
-        const typeInterval = setInterval(() => {
-            el.textContent = text.substring(0, i + 1);
+    const textToType = el.getAttribute('data-text');
+    
+    el.textContent = '';
+    
+    let i = 0;
+    function typeChar() {
+        if (i < textToType.length) {
+            el.textContent += textToType.charAt(i);
             i++;
-            if (i >= text.length) clearInterval(typeInterval);
-        }, 30);
-    }, 1500); // <--- Increased delay
+            setTimeout(typeChar, 100); 
+        } else {
+            setTimeout(() => { el.textContent = ''; i = 0; typeChar(); }, 3000);
+        }
+    }
+    
+    typeChar();
 }
 
 // GLITCH
